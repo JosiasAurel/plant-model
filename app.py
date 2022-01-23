@@ -13,6 +13,7 @@ class_names = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_r
 def make_prediction(image):
     loaded_image = Image.open(image)
     loaded_image = np.asarray(loaded_image)
+    loaded_image = tf.image.resize(loaded_image, (256, 256))
     image_tensor = tf.cast(loaded_image, tf.float32)
     image_tensor = tf.reshape(image_tensor, [-1, 256, 256, 3])
 
