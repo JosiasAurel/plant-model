@@ -36,41 +36,6 @@ def make_prediction(image):
 
 
 
-# image_path = "sample.jpg"
-""" sample_image = image.load_img(image_path, target_size=(256, 256))
-image_tensor = image.img_to_array(sample_image).reshape((256, 256, 3)) """
-
-""" sample_image = Image.open("sample.jpg")
-sample_image = np.asarray(sample_image) """
-# sample_image = np.reshape(sample_image, (32, 256, 3))
-# sample_image = np.resize(sample_image, (32, 256, 3))
-# sample_image = np.reshape(sample_image, (-1, 32, 256, 3))
-
-
-# print(sample_image, sample_image.shape)
-""" 
-class_names = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy', 'Blueberry___healthy', 'Cherry_(including_sour)___Powdery_mildew', 'Cherry_(including_sour)___healthy', 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot', 'Corn_(maize)___Common_rust_', 'Corn_(maize)___Northern_Leaf_Blight', 'Corn_(maize)___healthy', 'Grape___Black_rot', 'Grape___Esca_(Black_Measles)', 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)', 'Grape___healthy', 'Orange___Haunglongbing_(Citrus_greening)', 
-'Peach___Bacterial_spot', 'Peach___healthy', 'Pepper,_bell___Bacterial_spot', 'Pepper,_bell___healthy', 'Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy', 'Raspberry___healthy', 'Soybean___healthy', 'Squash___Powdery_mildew', 'Strawberry___Leaf_scorch', 'Strawberry___healthy', 'Tomato___Bacterial_spot', 'Tomato___Early_blight', 'Tomato___Late_blight', 'Tomato___Leaf_Mold', 'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus', 'Tomato___healthy']
-
-# can we predict already ?
-prediction = model.predict(image_tensor)
-prediction = np.array(prediction[0], dtype=np.int32).tolist()
-# print(prediction)
-def processed_result(prediction):
-    max_val = -1
-    max_idx = -1
-
-    for idx, value in enumerate(prediction):
-        if value > max_val:
-            max_val = value
-            max_idx = idx
-    # print(max_val)
-    return class_names[max_idx]
-
-result = processed_result(prediction)
-
-# print(result) """
-
 st.title("Plant Disease Detection Model")
 st.write("This is a sample model built as part of a bigger project run by Josias Aurel")
 st.write("For any more information, email josias@josiasw.dev")
